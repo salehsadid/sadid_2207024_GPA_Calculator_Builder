@@ -8,8 +8,8 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.sadid_2207024_gpa_calculator_builder.HomeController"
-            styleClass="root" stylesheets="@styles.css">
+            fx:controller="com.example.sadid_2207024_gpa_calculator_builder.homecontroller"
+            styleClass="root" stylesheets="@style.css">
 
     <center>
         <VBox alignment="CENTER" spacing="30" styleClass="home-container">
@@ -23,13 +23,13 @@
                 </font>
             </Label>
 
-            <Label text="Student GPA Calculator" styleClass="title-text">
+            <Label text="Student CGPA Calculator" styleClass="title-text">
                 <font>
                     <Font name="Arial Bold" size="36"/>
                 </font>
             </Label>
 
-            <Label text="Calculate your Grade Point Average easily" styleClass="subtitle-text">
+            <Label text="Calculate your CGPA easily" styleClass="subtitle-text">
                 <font>
                     <Font name="Arial" size="16"/>
                 </font>
@@ -41,7 +41,7 @@
                 </font>
             </Label>
 
-            <Button fx:id="startButton" text="Start GPA Calculator" onAction="#onStartButtonClick"
+            <Button fx:id="startButton" text="Start CGPA Calculator" onAction="#onStartButtonClick"
                     styleClass="start-button" prefWidth="250" prefHeight="50">
                 <font>
                     <Font name="Arial Bold" size="16"/>
