@@ -1,16 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.sadid_2207024_gpa_calculator_builder.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.sadid_2207024_gpa_calculator_builder.HomeController"
+            styleClass="root" stylesheets="@styles.css">
+
+    <center>
+        <VBox alignment="CENTER" spacing="30" styleClass="home-container">
+            <padding>
+                <Insets top="50" right="50" bottom="50" left="50"/>
+            </padding>
+
+            <Label text="Welcome to" styleClass="welcome-text">
+                <font>
+                    <Font name="Arial" size="24"/>
+                </font>
+            </Label>
+
+            <Label text="Student GPA Calculator" styleClass="title-text">
+                <font>
+                    <Font name="Arial Bold" size="36"/>
+                </font>
+            </Label>
+
+            <Label text="Calculate your Grade Point Average easily" styleClass="subtitle-text">
+                <font>
+                    <Font name="Arial" size="16"/>
+                </font>
+            </Label>
+
+            <Label text="Track your courses, grades, and academic performance" styleClass="description-text">
+                <font>
+                    <Font name="Arial" size="14"/>
+                </font>
+            </Label>
+
+            <Button fx:id="startButton" text="Start GPA Calculator" onAction="#onStartButtonClick"
+                    styleClass="start-button" prefWidth="250" prefHeight="50">
+                <font>
+                    <Font name="Arial Bold" size="16"/>
+                </font>
+            </Button>
+
+            <VBox.margin>
+                <Insets top="20"/>
+            </VBox.margin>
+        </VBox>
+    </center>
+</BorderPane>
