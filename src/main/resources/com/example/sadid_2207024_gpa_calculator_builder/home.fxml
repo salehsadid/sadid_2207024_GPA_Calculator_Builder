@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.sadid_2207024_gpa_calculator_builder.homecontroller"
+            fx:controller="com.example.sadid_2207024_gpa_calculator_builder.Homecontroller"
             styleClass="root" stylesheets="@style.css">
 
     <center>

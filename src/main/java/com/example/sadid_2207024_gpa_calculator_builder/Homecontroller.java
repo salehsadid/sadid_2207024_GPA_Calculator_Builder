@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-public class homecontroller {
+public class Homecontroller {
 
     @FXML
     private Button startButton;
