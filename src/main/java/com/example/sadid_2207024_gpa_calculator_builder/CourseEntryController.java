@@ -165,7 +165,7 @@ public class CourseEntryController implements Initializable {
         }
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("gpa-result-view.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("resultpage.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 900, 700);
 
             GpaResultController controller = fxmlLoader.getController();
