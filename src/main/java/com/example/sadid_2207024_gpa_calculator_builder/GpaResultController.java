@@ -176,7 +176,7 @@ public class GpaResultController {
 
     private void navigateToCourseEntry() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("course-entry-view.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("entry.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1000, 1000);
 
             Stage stage = (Stage) gpaValueLabel.getScene().getWindow();
@@ -190,7 +190,7 @@ public class GpaResultController {
 
     private void navigateToHome() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("home-view.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("home.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1000, 1000);
 
             Stage stage = (Stage) gpaValueLabel.getScene().getWindow();
