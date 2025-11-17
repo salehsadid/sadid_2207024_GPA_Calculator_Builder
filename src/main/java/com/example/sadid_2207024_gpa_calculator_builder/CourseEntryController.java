@@ -38,10 +38,10 @@ public class CourseEntryController implements Initializable {
     private TextField teacher2Field;
 
     @FXML
-    private ComboBox<String> gradeComboBox;
+    private ComboBox<String> gradeComboBox;   //dropdown for grades
 
     @FXML
-    private VBox courseListContainer;
+    private VBox courseListContainer; // list of courses display korar jonno
 
     @FXML
     private Button calculateGPAButton;
@@ -308,7 +308,7 @@ public class CourseEntryController implements Initializable {
 
     private void navigateToHome() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("home-view.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("home.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 700, 500);
 
             Stage stage = (Stage) calculateGPAButton.getScene().getWindow();
