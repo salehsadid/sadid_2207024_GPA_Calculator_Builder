@@ -327,4 +327,33 @@ public class CourseEntryController implements Initializable {
         alert.setContentText(content);
         alert.showAndWait();
     }
+    public void restoreState(List<Course> coursesList, String totalCreditsText) {
+        // Restore courses
+        this.courses = new ArrayList<>(coursesList);
+
+        // Parse and restore total credits
+        try {
+            this.totalCreditsRequired = Double.parseDouble(totalCreditsText);
+            this.totalCreditsField.setText(String.valueOf(this.totalCreditsRequired));
+            this.totalCreditsField.setDisable(true);
+
+            // Calculate current credits
+            this.currentCreditsEntered = 0.0;
+            for (Course course : courses) {
+                this.currentCreditsEntered += course.getCredit();
+            }
+
+            // Update UI
+            updateCourseList();
+            updateCreditsStatus();
+
+            // Enable Calculate button if credits match
+            if (Math.abs(currentCreditsEntered - totalCreditsRequired) < 0.01) {
+                calculateGPAButton.setDisable(false);
+            }
+        } catch (NumberFormatException e) {
+            // If parsing fails, just restore the courses
+            updateCourseList();
+        }
+    }
 }

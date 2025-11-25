@@ -179,6 +179,10 @@ public class GpaResultController {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("entry.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1000, 1000);
 
+            // Pass the course data back to preserve state
+            CourseEntryController controller = fxmlLoader.getController();
+            controller.restoreState(courses, totalCreditsLabel.getText());
+
             Stage stage = (Stage) gpaValueLabel.getScene().getWindow();
             stage.setTitle("GPA Calculator - Course Entry");
             stage.setScene(scene);

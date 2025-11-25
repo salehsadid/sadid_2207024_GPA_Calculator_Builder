@@ -40,161 +40,163 @@
 
     <!-- Main Content -->
     <center>
-        <VBox spacing="20" styleClass="content-section">
-            <padding>
-                <Insets bottom="20" left="30" right="30" top="20" />
-            </padding>
-
-            <!-- Total Credits Section -->
-            <HBox alignment="CENTER_LEFT" spacing="15" styleClass="credit-section">
-                <Label styleClass="label-text" text="Total Credits Required:">
-                    <font>
-                        <Font name="Arial Bold" size="14" />
-                    </font>
-                </Label>
-                <TextField fx:id="totalCreditsField" prefWidth="100" promptText="e.g., 12" styleClass="text-field" />
-                <Button onAction="#onSetTotalCredits" styleClass="secondary-button" text="Set Total Credits">
-                    <font>
-                        <Font name="Arial Bold" size="12" />
-                    </font>
-                </Button>
-                <Label fx:id="creditsStatusLabel" styleClass="status-label" text="">
-                    <font>
-                        <Font name="Arial" size="12" />
-                    </font>
-                </Label>
-            </HBox>
-
-            <Separator />
-
-            <!-- Course Input Form -->
-            <GridPane hgap="15" styleClass="form-section" vgap="15">
+        <ScrollPane fitToWidth="true" styleClass="scroll-pane">
+            <VBox spacing="20" styleClass="content-section">
                 <padding>
-                    <Insets bottom="10" left="10" right="10" top="10" />
+                    <Insets bottom="20" left="30" right="30" top="20" />
                 </padding>
 
-                <!-- Row 0: Course Name -->
-                <Label styleClass="label-text" text="Course Name:" GridPane.columnIndex="0" GridPane.rowIndex="0">
-                    <font>
-                        <Font name="Arial Bold" size="13" />
-                    </font>
-                </Label>
-                <TextField fx:id="courseNameField" prefWidth="250" promptText="e.g., Advanced Programming" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <!-- Total Credits Section -->
+                <HBox alignment="CENTER_LEFT" spacing="15" styleClass="credit-section">
+                    <Label styleClass="label-text" text="Total Credits Required:">
+                        <font>
+                            <Font name="Arial Bold" size="14" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="totalCreditsField" prefWidth="100" promptText="e.g., 12" styleClass="text-field" />
+                    <Button onAction="#onSetTotalCredits" styleClass="secondary-button" text="Set Total Credits">
+                        <font>
+                            <Font name="Arial Bold" size="12" />
+                        </font>
+                    </Button>
+                    <Label fx:id="creditsStatusLabel" styleClass="status-label" text="">
+                        <font>
+                            <Font name="Arial" size="12" />
+                        </font>
+                    </Label>
+                </HBox>
 
-                <!-- Row 1: Course Code -->
-                <Label styleClass="label-text" text="Course Code:" GridPane.columnIndex="0" GridPane.rowIndex="1">
-                    <font>
-                        <Font name="Arial Bold" size="13" />
-                    </font>
-                </Label>
-                <TextField fx:id="courseCodeField" prefWidth="250" promptText="e.g., CSE 2200" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Separator />
 
-                <!-- Row 2: Course Credit -->
-                <Label styleClass="label-text" text="Course Credit:" GridPane.columnIndex="0" GridPane.rowIndex="2">
-                    <font>
-                        <Font name="Arial Bold" size="13" />
-                    </font>
-                </Label>
-                <TextField fx:id="courseCreditField" prefWidth="250" promptText="e.g., 1.5" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <!-- Course Input Form -->
+                <GridPane hgap="15" styleClass="form-section" vgap="15">
+                    <padding>
+                        <Insets bottom="10" left="10" right="10" top="10" />
+                    </padding>
 
-                <!-- Row 3: Teacher 1 -->
-                <Label styleClass="label-text" text="Teacher 1 Name:" GridPane.columnIndex="0" GridPane.rowIndex="3">
-                    <font>
-                        <Font name="Arial Bold" size="13" />
-                    </font>
-                </Label>
-                <TextField fx:id="teacher1Field" prefWidth="250" promptText="e.g., Assist. Prof. Imran Hossain" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <!-- Row 0: Course Name -->
+                    <Label styleClass="label-text" text="Course Name:" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <font>
+                            <Font name="Arial Bold" size="13" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="courseNameField" prefWidth="250" promptText="e.g., Advanced Programming" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="0" />
 
-                <!-- Row 4: Teacher 2 -->
-                <Label styleClass="label-text" text="Teacher 2 Name:" GridPane.columnIndex="0" GridPane.rowIndex="4">
-                    <font>
-                        <Font name="Arial Bold" size="13" />
-                    </font>
-                </Label>
-                <TextField fx:id="teacher2Field" prefWidth="250" promptText="e.g., Lec. Ehsanul Karim Talha" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                    <!-- Row 1: Course Code -->
+                    <Label styleClass="label-text" text="Course Code:" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                        <font>
+                            <Font name="Arial Bold" size="13" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="courseCodeField" prefWidth="250" promptText="e.g., CSE 2200" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-                <!-- Row 5: Grade -->
-                <Label styleClass="label-text" text="Grade:" GridPane.columnIndex="0" GridPane.rowIndex="5">
-                    <font>
-                        <Font name="Arial Bold" size="13" />
-                    </font>
-                </Label>
-                <ComboBox fx:id="gradeComboBox" prefWidth="250" promptText="Select Grade" styleClass="combo-box" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                    <!-- Row 2: Course Credit -->
+                    <Label styleClass="label-text" text="Course Credit:" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                        <font>
+                            <Font name="Arial Bold" size="13" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="courseCreditField" prefWidth="250" promptText="e.g., 1.5" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-                <!-- Row 6: Buttons -->
-                <HBox spacing="15" GridPane.columnIndex="1" GridPane.rowIndex="6">
-                    <Button onAction="#onAddCourse" prefWidth="120" styleClass="primary-button" text="Add Course">
+                    <!-- Row 3: Teacher 1 -->
+                    <Label styleClass="label-text" text="Teacher 1 Name:" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                        <font>
+                            <Font name="Arial Bold" size="13" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="teacher1Field" prefWidth="250" promptText="e.g., Assist. Prof. Imran Hossain" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                    <!-- Row 4: Teacher 2 -->
+                    <Label styleClass="label-text" text="Teacher 2 Name:" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                        <font>
+                            <Font name="Arial Bold" size="13" />
+                        </font>
+                    </Label>
+                    <TextField fx:id="teacher2Field" prefWidth="250" promptText="e.g., Lec. Ehsanul Karim Talha" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                    <!-- Row 5: Grade -->
+                    <Label styleClass="label-text" text="Grade:" GridPane.columnIndex="0" GridPane.rowIndex="5">
+                        <font>
+                            <Font name="Arial Bold" size="13" />
+                        </font>
+                    </Label>
+                    <ComboBox fx:id="gradeComboBox" prefWidth="250" promptText="Select Grade" styleClass="combo-box" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                    <!-- Row 6: Buttons -->
+                    <HBox spacing="15" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                        <Button onAction="#onAddCourse" prefWidth="120" styleClass="primary-button" text="Add Course">
+                            <font>
+                                <Font name="Arial Bold" size="13" />
+                            </font>
+                        </Button>
+                        <Button onAction="#onClearForm" prefWidth="120" styleClass="secondary-button" text="Clear Form">
+                            <font>
+                                <Font name="Arial Bold" size="13" />
+                            </font>
+                        </Button>
+                    </HBox>
+                    <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                    </rowConstraints>
+                </GridPane>
+
+                <Separator />
+
+                <!-- Course List Section -->
+                <VBox spacing="10" styleClass="course-list-section">
+                    <Label styleClass="section-title" text="Added Courses:">
+                        <font>
+                            <Font name="Arial Bold" size="16" />
+                        </font>
+                    </Label>
+
+                    <ScrollPane fitToWidth="true" prefHeight="200" styleClass="scroll-pane">
+                        <VBox fx:id="courseListContainer" spacing="8" styleClass="course-container">
+                            <padding>
+                                <Insets bottom="10" left="10" right="10" top="10" />
+                            </padding>
+                        </VBox>
+                    </ScrollPane>
+                </VBox>
+
+                <Separator />
+
+                <!-- Bottom Action Bar -->
+                <HBox alignment="CENTER" spacing="20" styleClass="action-bar">
+                    <padding>
+                        <Insets bottom="20" left="20" right="20" top="20" />
+                    </padding>
+
+                    <Button onAction="#onBackToHome" prefWidth="150" styleClass="secondary-button" text="← Back to Home">
                         <font>
                             <Font name="Arial Bold" size="13" />
                         </font>
                     </Button>
-                    <Button onAction="#onClearForm" prefWidth="120" styleClass="secondary-button" text="Clear Form">
+
+                    <Button fx:id="calculateGPAButton" disable="true" onAction="#onCalculateGPA" prefHeight="40" prefWidth="200" styleClass="calculate-button" text="Calculate CGPA">
+                        <font>
+                            <Font name="Arial Bold" size="16" />
+                        </font>
+                    </Button>
+
+                    <Button onAction="#onResetAll" prefWidth="150" styleClass="danger-button" text="Reset All">
                         <font>
                             <Font name="Arial Bold" size="13" />
                         </font>
                     </Button>
                 </HBox>
-            <columnConstraints>
-               <ColumnConstraints />
-               <ColumnConstraints />
-            </columnConstraints>
-            <rowConstraints>
-               <RowConstraints />
-               <RowConstraints />
-               <RowConstraints />
-               <RowConstraints />
-               <RowConstraints />
-               <RowConstraints />
-               <RowConstraints />
-            </rowConstraints>
-            </GridPane>
-
-            <Separator />
-
-            <!-- Course List Section -->
-            <VBox spacing="10" styleClass="course-list-section">
-                <Label styleClass="section-title" text="Added Courses:">
-                    <font>
-                        <Font name="Arial Bold" size="16" />
-                    </font>
-                </Label>
-
-                <ScrollPane fitToWidth="true" prefHeight="200" styleClass="scroll-pane">
-                    <VBox fx:id="courseListContainer" spacing="8" styleClass="course-container">
-                        <padding>
-                            <Insets bottom="10" left="10" right="10" top="10" />
-                        </padding>
-                    </VBox>
-                </ScrollPane>
             </VBox>
-        </VBox>
+        </ScrollPane>
     </center>
-
-    <!-- Bottom Action Bar -->
-    <bottom>
-        <HBox alignment="CENTER" spacing="20" styleClass="action-bar">
-            <padding>
-                <Insets bottom="20" left="20" right="20" top="20" />
-            </padding>
-
-            <Button onAction="#onBackToHome" prefWidth="150" styleClass="secondary-button" text="← Back to Home">
-                <font>
-                    <Font name="Arial Bold" size="13" />
-                </font>
-            </Button>
-
-            <Button fx:id="calculateGPAButton" disable="true" onAction="#onCalculateGPA" prefHeight="40" prefWidth="200" styleClass="calculate-button" text="Calculate CGPA">
-                <font>
-                    <Font name="Arial Bold" size="16" />
-                </font>
-            </Button>
-
-            <Button onAction="#onResetAll" prefWidth="150" styleClass="danger-button" text="Reset All">
-                <font>
-                    <Font name="Arial Bold" size="13" />
-                </font>
-            </Button>
-        </HBox>
-    </bottom>
 
 </BorderPane>
