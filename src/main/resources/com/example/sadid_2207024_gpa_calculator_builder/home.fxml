@@ -48,6 +48,13 @@
                 </font>
             </Button>
 
+            <Button fx:id="viewRecordsButton" text="📊 View Records" onAction="#onViewRecords"
+                    styleClass="secondary-button" prefWidth="250" prefHeight="50">
+                <font>
+                    <Font name="Arial Bold" size="16"/>
+                </font>
+            </Button>
+
             <VBox.margin>
                 <Insets top="20"/>
             </VBox.margin>
