@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -21,6 +22,37 @@
                 <padding>
                     <Insets bottom="40" left="50" right="50" top="40" />
                 </padding>
+
+                <!-- Student Information Input Section -->
+                <VBox alignment="CENTER" spacing="15" styleClass="student-info-section">
+                    <padding>
+                        <Insets bottom="10" left="20" right="20" top="10" />
+                    </padding>
+
+                    <Label styleClass="section-header" text="Student Information">
+                        <font>
+                            <Font name="Arial Bold" size="18" />
+                        </font>
+                    </Label>
+
+                    <HBox alignment="CENTER" spacing="15">
+                        <Label styleClass="label-text" text="Student Name:">
+                            <font>
+                                <Font name="Arial Bold" size="14" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="studentNameField" prefWidth="200" promptText="Enter student name" styleClass="text-field" />
+
+                        <Label styleClass="label-text" text="Student ID:">
+                            <font>
+                                <Font name="Arial Bold" size="14" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="studentIdField" prefWidth="150" promptText="e.g., 2207024" styleClass="text-field" />
+                    </HBox>
+                </VBox>
+
+                <Separator prefWidth="600" />
 
                 <!-- Award Header -->
                 <VBox alignment="CENTER" spacing="15" styleClass="award-header">
@@ -121,15 +153,15 @@
                                 <Font name="Arial" size="14" />
                             </font>
                         </Label>
-                  <columnConstraints>
-                     <ColumnConstraints />
-                     <ColumnConstraints />
-                  </columnConstraints>
-                  <rowConstraints>
-                     <RowConstraints />
-                     <RowConstraints />
-                     <RowConstraints />
-                  </rowConstraints>
+                        <columnConstraints>
+                            <ColumnConstraints />
+                            <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                        </rowConstraints>
                     </GridPane>
                 </VBox>
 
@@ -225,7 +257,13 @@
                 <Insets bottom="15" left="20" right="20" top="15" />
             </padding>
 
-            <Button onAction="#onBackToCourseEntry" prefWidth="180" styleClass="secondary-button" text=" Back to Course Entry">
+            <Button onAction="#onBackToCourseEntry" prefWidth="180" styleClass="secondary-button" text="← Back to Course Entry">
+                <font>
+                    <Font name="Arial Bold" size="13" />
+                </font>
+            </Button>
+
+            <Button fx:id="saveRecordButton" onAction="#onSaveRecord" prefWidth="150" styleClass="primary-button" text="💾 Save Record">
                 <font>
                     <Font name="Arial Bold" size="13" />
                 </font>
