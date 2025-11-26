@@ -10,6 +10,9 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        // Initialize database
+        DatabaseHelper.initializeDatabase();
+
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("home.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 700, 500);
         stage.setTitle("GPA Calculator - Home");
@@ -17,5 +20,8 @@ public class HelloApplication extends Application {
         stage.setMinWidth(800);
         stage.setMinHeight(800);
         stage.show();
+
+        // Close database connection when application closes
+        stage.setOnCloseRequest(event -> DatabaseHelper.closeConnection());
     }
 }
