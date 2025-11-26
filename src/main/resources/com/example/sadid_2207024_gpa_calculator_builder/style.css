@@ -300,3 +300,90 @@
 .date-label {
     -fx-text-fill: #7f8c8d;
 }
+
+/* Student Info Section */
+.student-info-section {
+    -fx-background-color: #ecf0f1;
+    -fx-background-radius: 8;
+    -fx-padding: 15;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+}
+
+.student-info-display {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 8;
+    -fx-padding: 15;
+}
+
+.student-name-label {
+    -fx-text-fill: #2c3e50;
+}
+
+.student-id-label {
+    -fx-text-fill: #7f8c8d;
+}
+
+/* Records Table Styles */
+.records-table {
+    -fx-background-color: white;
+    -fx-border-color: #dcdcdc;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+.records-table .column-header {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+}
+
+.records-table .table-row-cell {
+    -fx-background-color: white;
+}
+
+.records-table .table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+.records-table .table-row-cell:hover {
+    -fx-background-color: #e8f4f8;
+    -fx-cursor: hand;
+}
+
+.records-table .table-cell {
+    -fx-padding: 8;
+    -fx-alignment: CENTER-LEFT;
+}
+
+/* Loading and Empty States */
+.loading-pane {
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-padding: 50;
+}
+
+.loading-text {
+    -fx-text-fill: #2c3e50;
+}
+
+.empty-pane {
+    -fx-background-color: white;
+    -fx-padding: 50;
+}
+
+.empty-text {
+    -fx-text-fill: #95a5a6;
+}
+
+.empty-subtext {
+    -fx-text-fill: #bdc3c7;
+}
+
+/* Value Text */
+.value-text {
+    -fx-text-fill: #34495e;
+    -fx-font-style: italic;
+}
+
