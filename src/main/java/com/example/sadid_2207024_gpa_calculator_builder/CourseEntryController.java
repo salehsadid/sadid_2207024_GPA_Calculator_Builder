@@ -327,6 +327,7 @@ public class CourseEntryController implements Initializable {
         alert.setContentText(content);
         alert.showAndWait();
     }
+
     public void restoreState(List<Course> coursesList, String totalCreditsText) {
         // Restore courses
         this.courses = new ArrayList<>(coursesList);

@@ -12,6 +12,9 @@ public class Homecontroller {
     private Button startButton;
 
     @FXML
+    private Button viewRecordsButton;
+
+    @FXML
     protected void onStartButtonClick() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("entry.fxml"));
@@ -19,6 +22,21 @@ public class Homecontroller {
 
             Stage stage = (Stage) startButton.getScene().getWindow();
             stage.setTitle(" CGPA Calculator - Course Entry");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    protected void onViewRecords() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("recordsview.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 1200, 700);
+
+            Stage stage = (Stage) viewRecordsButton.getScene().getWindow();
+            stage.setTitle("CGPA Calculator - Student Records");
             stage.setScene(scene);
             stage.show();
         } catch (IOException e) {
